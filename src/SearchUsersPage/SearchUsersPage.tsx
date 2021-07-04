@@ -5,8 +5,8 @@ import {
 	makeStyles,
 	Theme,
 	Typography,
+	CircularProgress
 } from '@material-ui/core'
-import { Spinner } from 'react-bootstrap'
 import React, { FC, useContext, useEffect, useState } from 'react'
 import { ApiContext } from '../ApiContext'
 import { AppTitleContext } from '../AppTitleContext'
@@ -123,8 +123,8 @@ const SearchUsersPage: FC<SearchUsersPageProps> = ({
 					>
 						Search
 						
-						{isLoading &&(
-							<Spinner className="loading-spinner" animation="border" variant="primary" />
+						{isLoading && (
+							<CircularProgress color="inherit" size={16} />
 						)}
 					</Button>
 				</Grid>
